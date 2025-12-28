@@ -1,0 +1,12 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "emmet.includeLanguages": {
+    "liquid": "html"
+  },
+  "editor.insertSpaces": true,
+  "editor.rulers": [120],
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false
+}
