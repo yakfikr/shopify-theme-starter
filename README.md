@@ -112,22 +112,26 @@ The theme includes [idiomorph](https://github.com/bigskysoftware/idiomorph) as a
 **To add a shared package:**
 
 1. Install the package:
+
    ```bash
    npm install <package-name>
    ```
 
 2. Create a barrel file in `js/` that re-exports the package:
+
    ```javascript
    // js/<package-name>.js
    export * from '<package-name>';
    ```
 
 3. Add the alias to the external array in `esbuild.config.js`:
+
    ```javascript
-   external: ['@theme/<package-name>']
+   external: ['@theme/<package-name>'];
    ```
 
 4. Register the mapping in `snippets/scripts.liquid`:
+
    ```html
    <script type="importmap">
      {
@@ -144,10 +148,6 @@ The theme includes [idiomorph](https://github.com/bigskysoftware/idiomorph) as a
    ```
 
 The package is bundled once and shared across all bundles via the import map. This pattern is inspired by [Shopify Horizon](https://github.com/Shopify/horizon).
-
-### CSS Variables
-
-Theme settings from the Shopify customizer are converted to CSS custom properties in `snippets/css-variables.liquid`.
 
 ## Scripts
 
